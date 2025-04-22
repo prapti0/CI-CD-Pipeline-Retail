@@ -6,10 +6,10 @@ FROM tomcat:latest
 COPY abc_tech.war /usr/local/tomcat/webapps/
 
 # Change Tomcat port from 8080 to 9090
-RUN sed -i 's/port="8080"/port="9090"/g' /usr/local/tomcat/conf/server.xml
+RUN sed -i 's/port="8080"/port="8081"/g' /usr/local/tomcat/conf/server.xml
 
 # Expose the port (for documentation purposes)
-EXPOSE 9090
+EXPOSE 8081
 
 # Command to run Tomcat
 CMD ["catalina.sh", "run"]
