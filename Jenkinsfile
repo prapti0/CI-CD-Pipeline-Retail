@@ -38,7 +38,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Copy the WAR file and build the Docker image
-                sh 'cp ${WORK_DIR}/target/ABCtechnologies-1.0.war abc_tech.war'
+                sh 'cp ${WORK_DIR}/target/ABCtechnologies-1.0-1.0.war abc_tech.war'
                 sh 'docker build -t ${DOCKER_IMAGE}:latest .'
             }
         }
