@@ -2,7 +2,7 @@
 FROM tomcat:latest
 
 # Copy the WAR file to the Tomcat webapps directory
-#COPY ./ABCtechnologies-1.0.war /usr/local/tomcat/webapps/
+#COPY ./ABCtechnologies-1.0-1.0.war /usr/local/tomcat/webapps/
 COPY abc_tech.war /usr/local/tomcat/webapps/
 
 # Change Tomcat port from 8080 to 9090
