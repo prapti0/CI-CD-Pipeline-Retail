@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         DOCKER_IMAGE = "prapti989/ci-cd"
-        WORK_DIR = "/var/lib/jenkins/workspace/pipeline"
+        WORK_DIR = "/var/lib/jenkins/workspace/pipeline1"
     }
 
     stages {
