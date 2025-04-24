@@ -60,10 +60,11 @@ pipeline {
         }
          stage('Deploy to k8s cluster') {
             steps {
-                withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
+                withCredentials([file(credentialsId: 'kubeconfig1', variable: 'KUBECONFIG')]) {
                     // Create or update the Kubernetes deployment
-                    sh 'kubectl delete deployment abcapp --ignore-not-found'
-                    sh 'kubectl create deployment abcapp --image=${DOCKER_IMAGE}:latest'
+                    sh "kubectl delete deployment abcapp --ignore-not-found"
+                    sh "kubectl create deployment abcapp --image=${DOCKER_IMAGE}:latest"
+
                 }
             }
         }
